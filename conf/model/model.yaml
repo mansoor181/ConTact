@@ -1,0 +1,37 @@
+# CompFirst Model Configuration
+# Contact-First CDR Design with Distance-Biased Attention
+
+# Architecture
+embed_size: 32
+hidden_size: 256
+n_layers: 4
+dropout: 0.1
+num_attn_heads: 2
+
+# Virtual node config
+n_virtual_nodes: 3
+
+# CompFirst-specific
+fingerprint_dim: 32
+fp_k: 4                    # K nearest neighbors for LocalCompInjector
+contact_weight_alpha: 4.466 # contact position weight multiplier in CE
+dist_attn_scale: 4.0       # Gaussian decay scale for distance bias (angstroms)
+
+# Loss weights (from sweep)
+alpha: 0.598        # coordinate loss weight
+beta: 0.103         # contrastive pairing loss weight
+gamma: 0.233        # docking proximity loss weight
+zeta: 0.020         # fingerprint loss weight
+contact_loss_weight: 1.763  # contact prediction loss weight
+eta: 0.2            # auxiliary CDR feature reconstruction weight
+dock_cutoff: 10.0   # CA distance cutoff for epitope definition (angstroms)
+
+# Feature modes
+node_feats_mode: "1111"
+edge_feats_mode: "1111"
+interface_only: 1
+mode: "111"
+
+# L1: germline (J,pos) log-prior fusion into seq head (additive, learnable lambda)
+use_germline_prior: false
+germline_prior_lambda_init: 1.0

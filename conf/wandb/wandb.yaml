@@ -1,0 +1,4 @@
+# Weights & Biases configuration
+
+enabled: true
+project: chimera

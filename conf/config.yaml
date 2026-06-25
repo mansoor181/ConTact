@@ -1,0 +1,23 @@
+# CompFirst: Contact-First CDR Design
+# Main Hydra configuration
+
+defaults:
+  - _self_
+  - model: model
+  - training: training
+  - dataset: dataset
+  - callbacks: callbacks
+  - wandb: wandb
+
+hydra:
+  run:
+    dir: /tmp/hydra_compfirst/${now:%Y%m%d-%H%M%S}
+  output_subdir: null
+
+# Data paths
+data_root: /home/exouser/data/chimera
+results_dir: /media/volume/data2/chimera/results/compfirst
+features_path: /home/exouser/data/chimera/processed/rich_features_v2.pt
+
+# CDR numbering scheme (IMGT for CompFirst)
+numbering_scheme: imgt

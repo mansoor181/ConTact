@@ -1,0 +1,14 @@
+# Training configuration (from sweep optimization)
+
+seed: 42
+gpu: 0
+max_epoch: 100
+batch_size: 8
+lr: 6.31e-4
+weight_decay: 0
+anneal_base: 0.944
+grad_clip: 0.5
+num_workers: 4
+
+# Run name (auto-generated if empty)
+run_name: ""

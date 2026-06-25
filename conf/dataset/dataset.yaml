@@ -1,0 +1,7 @@
+# Dataset configuration
+
+# Split type: epitope_group | antigen_fold | temporal | random
+split: epitope_group
+
+# CDR type: 1 (H1) | 2 (H2) | 3 (H3)
+cdr_type: "3"
