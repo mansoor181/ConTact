@@ -4,6 +4,8 @@
 
 CompFirst addresses **failure mode of no contact reasoning**: a contact-first architecture that explicitly predicts CDR-antigen contacts and uses these predictions to guide sequence and structure design.
 
+![ConTact](data/contact.png)
+
 ## Directory Structure
 
 ```
